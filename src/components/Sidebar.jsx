@@ -3,7 +3,7 @@ import ButtonGroup from "./ButtonGroup";
 
 function Sidebar() {
   return (
-    <div>
+    <div className="sidebar">
       <AddItemForm />
       <ButtonGroup />
     </div>
