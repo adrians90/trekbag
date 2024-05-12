@@ -21,6 +21,7 @@ function AddItemForm({ setItems }) {
           packed: false,
         };
         setItems((prev) => [...prev, newItem]);
+        setItemText("");
       }}
     >
       <h2>Add an item</h2>
