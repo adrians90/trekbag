@@ -1,5 +1,10 @@
 function Header() {
-  return <div>Header</div>;
+  return (
+    <header>
+      <Logo />
+      <Counter />
+    </header>
+  );
 }
 
 export default Header;
