@@ -1,10 +1,10 @@
-import { useContext } from "react";
 import Counter from "./Counter";
 import Logo from "./Logo";
-import { ItemsContext } from "./contexts/ItemsContextProvider";
+
+import { useItemsContext } from "./lib/hooks";
 
 function Header() {
-  const { items } = useContext(ItemsContext);
+  const { items } = useItemsContext();
   return (
     <header>
       <Logo />
