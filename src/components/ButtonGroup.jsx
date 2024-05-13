@@ -26,11 +26,11 @@ function ButtonGroup({
   ];
   return (
     <section className="button-group">
-      {secondaryButtons.map(({ text, onClick }) => {
+      {secondaryButtons.map(({ text, onClick }) => (
         <Button key={text} buttonType="secondary" onClick={onClick}>
           {text}
-        </Button>;
-      })}
+        </Button>
+      ))}
     </section>
   );
 }
