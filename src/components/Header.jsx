@@ -1,16 +1,5 @@
-import Counter from "./Counter";
-import Logo from "./Logo";
-
-function Header({ totalNumberOfItems, numberOfItemsPacked }) {
-  return (
-    <header>
-      <Logo />
-      <Counter
-        totalNumberOfItems={totalNumberOfItems}
-        numberOfItemsPacked={numberOfItemsPacked}
-      />
-    </header>
-  );
+function Header({ children }) {
+  return <header>{children}</header>;
 }
 
 export default Header;
