@@ -17,7 +17,7 @@ const sortingOptions = [
   },
 ];
 
-function ItemList({ items, handleDeleteItem, handleToggleItem }) {
+function ItemList() {
   const [sortBy, setSortBy] = useState("default");
 
   const sortedItems = useMemo(
