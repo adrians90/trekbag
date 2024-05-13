@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { initialItems } from "../lib/constants";
 
-const ItemsContext = createContext();
+export const ItemsContext = createContext();
 
 function ItemsContextProvider({ children }) {
   const [items, setItems] = useState(() => {
