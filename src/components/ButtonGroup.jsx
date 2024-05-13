@@ -1,6 +1,6 @@
-import { useContext } from "react";
 import Button from "./Button";
-import { ItemsContext } from "./contexts/ItemsContextProvider";
+
+import { useItemsContext } from "./lib/hooks";
 
 function ButtonGroup() {
   const {
@@ -8,7 +8,7 @@ function ButtonGroup() {
     handleMarkAllAsIncomplete,
     handleResetToInitial,
     handleRemoveAllItems,
-  } = useContext(ItemsContext);
+  } = useItemsContext();
   const secondaryButtons = [
     {
       text: "Mark all as complete",
