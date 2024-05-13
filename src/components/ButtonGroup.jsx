@@ -3,8 +3,8 @@ import Button from "./Button";
 
 function ButtonGroup() {
   const markAllAsComplete = useItemsStore((state) => state.markAllAsComplete);
-  const markAllAsInComplete = useItemsStore(
-    (state) => state.markAllAsInComplete
+  const markAllAsIncomplete = useItemsStore(
+    (state) => state.markAllAsIncomplete
   );
   const resetToInitial = useItemsStore((state) => state.resetToInitial);
   const removeAllItems = useItemsStore((state) => state.removeAllItems);
@@ -14,7 +14,7 @@ function ButtonGroup() {
       <Button onClick={markAllAsComplete} buttonType="secondary">
         Mark all as complete
       </Button>
-      <Button onClick={markAllAsInComplete} buttonType="secondary">
+      <Button onClick={markAllAsIncomplete} buttonType="secondary">
         Mark all as incomplete
       </Button>
       <Button onClick={resetToInitial} buttonType="secondary">
