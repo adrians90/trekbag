@@ -1,6 +1,9 @@
+import EmptyView from "./EmptyView";
+
 function ItemList({ items, handleDeleteItem, handleToggleItem }) {
   return (
     <ul>
+      {items.length === 0 ? <EmptyView /> : null}
       {items.map((item) => {
         return (
           <Item
