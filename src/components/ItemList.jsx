@@ -1,20 +1,26 @@
-function ItemList({ items }) {
+function ItemList({ items, handleDeleteItem }) {
   return (
     <ul>
       {items.map((item) => {
-        return <Item key={item.name} item={item} />;
+        return (
+          <Item
+            key={item.name}
+            item={item}
+            handleDeleteItem={handleDeleteItem}
+          />
+        );
       })}
     </ul>
   );
 }
 
-function Item({ item }) {
+function Item({ item, handleDeleteItem }) {
   return (
     <li className="item">
       <label>
         <input checked={item.packed} type="checkbox" /> {item.name}
       </label>
-      <button>❌</button>
+      <button onClick={() => handleDeleteItem(item.id)}>❌</button>
     </li>
   );
 }
