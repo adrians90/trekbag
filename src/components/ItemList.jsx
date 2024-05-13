@@ -1,4 +1,4 @@
-function ItemList({ items, handleDeleteItem }) {
+function ItemList({ items, handleDeleteItem, handleToggleItem }) {
   return (
     <ul>
       {items.map((item) => {
@@ -7,6 +7,7 @@ function ItemList({ items, handleDeleteItem }) {
             key={item.name}
             item={item}
             handleDeleteItem={handleDeleteItem}
+            handleToggleItem={handleToggleItem}
           />
         );
       })}
@@ -14,11 +15,16 @@ function ItemList({ items, handleDeleteItem }) {
   );
 }
 
-function Item({ item, handleDeleteItem }) {
+function Item({ item, handleDeleteItem, handleToggleItem }) {
   return (
     <li className="item">
       <label>
-        <input checked={item.packed} type="checkbox" /> {item.name}
+        <input
+          onChange={() => handleToggleItem(item.id)}
+          checked={item.packed}
+          type="checkbox"
+        />{" "}
+        {item.name}
       </label>
       <button onClick={() => handleDeleteItem(item.id)}>❌</button>
     </li>
